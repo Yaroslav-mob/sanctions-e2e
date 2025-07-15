@@ -10,22 +10,13 @@ export default defineConfig({
   use: {
     baseURL: 'https://war-sanctions.gur.gov.ua/en',
     trace: 'on-first-retry',
+    headless: false,
   },
 
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
-
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
     },
   ],
 });
